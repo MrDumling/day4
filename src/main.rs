@@ -24,7 +24,7 @@ fn get_input(path: &str) -> Lines<BufReader<File>> {
 }
 
 fn get_pair(input_line: String) -> (CleaningRange, CleaningRange) {
-    let Some((range_a, range_b)) = input_line.split_once(",") else {
+    let Some((range_a, range_b)) = input_line.split_once(',') else {
         panic!("Expected ',' to split ranges");
     };
 
@@ -32,7 +32,7 @@ fn get_pair(input_line: String) -> (CleaningRange, CleaningRange) {
 }
 
 fn get_range(input: &str) -> CleaningRange {
-    let Some((left, right)) = input.split_once("-") else {
+    let Some((left, right)) = input.split_once('-') else {
         panic!("Unable to parse range that does not contain '-'");
     };
     CleaningRange {
