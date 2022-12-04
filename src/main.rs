@@ -1,7 +1,6 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader, Lines};
 
-#[derive(Debug)]
 struct CleaningRange {
     left: u64,
     right: u64,
@@ -56,7 +55,7 @@ fn puzzle_1() {
         .filter(|(x, y)| x.encompasses_range(y) || y.encompasses_range(x))
         .count();
 
-    println!("{:#?}", count);
+    println!("{count}");
 }
 
 fn puzzle_2() {
@@ -69,7 +68,7 @@ fn puzzle_2() {
         .filter(|(x, y)| x.overlaps_range(y))
         .count();
 
-    println!("{:#?}", count);
+    println!("{count}");
 }
 
 fn main() {
